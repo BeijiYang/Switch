@@ -17,7 +17,8 @@ const Switch = React.forwardRef(
           disabled={disabled}
         />
       </div>
-    ))
+    )
+)
 
 Switch.propTypes = {
   handleFormChange: PropTypes.func,

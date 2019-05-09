@@ -15,20 +15,20 @@ class SwitchContainer extends Component {
     this.checkBox.current.firstChild.focus()
   }
 
-  switch = (e) => {
-    const { state: { status, disabled } } = this
+  switchCheckBox = () => {
+    const { state: { status, disabled }, checkBox } = this
     if (disabled) return
     this.setState({ status: !status })
-    this.checkBox.current.classList.toggle('unchecked')
+    checkBox.current.classList.toggle('unchecked')
   }
 
   handleKeyUp = ({ code }) => {
     if (code !== 'Space') return
-    this.switch()
+    this.switchCheckBox()
   }
 
   render() {
-    const { state: { status, disabled } } = this
+    const { state: { status, disabled }, checkBox, switchCheckBox } = this
     return (
       <div
         className={disabled ? 'switch-wrap disabled' : 'switch-wrap'}
@@ -36,8 +36,8 @@ class SwitchContainer extends Component {
         <Switch
           checked={status}
           disabled={disabled}
-          handleFormChange={this.switch}
-          ref={this.checkBox}
+          handleFormChange={switchCheckBox}
+          ref={checkBox}
         />
       </ div>
     )
