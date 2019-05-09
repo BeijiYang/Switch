@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.switch-wrap {
+  width: 80px;
+  height: 30px;
+  border-radius: 80px;
+  border: solid 2px grey;
+  margin-bottom: 100px;
+  position: relative;
+  background-color: rgba(147, 143, 143, 0.7);
+  overflow: hidden;
+}
+.switch-wrap:hover {
+  cursor: pointer;
+}
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.switch-wrap.disabled {
+   opacity: 0.6
+}
+.switch-wrap.disabled:hover {
+  cursor: not-allowed;
+}
+.checkbox.disabled:hover {
+  cursor: not-allowed;
+}
+
+.switch {
+    position:absolute;
+    background-color:rgb(0, 166, 255);
+    width: 40%;
+    height: 100%;
+    transition:all 0.2s linear;
+    border-radius: 100px;
+    left: 0;
+}
+
+.unchecked {
+  left:50px;
+}
+
+.checkbox {
+  display: block;
+  border-radius: 100px;
+  width: 30px;
+  background-color: yellow;
+  opacity: 0
+}
