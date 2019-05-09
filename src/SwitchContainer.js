@@ -21,7 +21,10 @@ class SwitchContainer extends Component {
     const { state: { status, disabled } } = this
 
     return (
-      <div className={disabled ? 'switch-wrap disabled' : 'switch-wrap'} onClick={this.switch} ref={(checkbox) => { this.checkbox = checkbox }}>
+      <div
+        className={disabled ? 'switch-wrap disabled' : 'switch-wrap'}
+        onClick={this.switch}
+        ref={(checkbox) => { this.checkbox = checkbox }}>
         <Switch checked={status} disabled={disabled} />
       </div>
     )

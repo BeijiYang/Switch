@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Switch = ({ disabled, onClick }) => (
+const Switch = ({ disabled }) => (
   <div className='switch'>
-    <input className={disabled ? 'checkbox disabled' : 'checkbox'} type="checkbox" onClick={onClick} disabled={disabled} />
+    <input
+      className={disabled ? 'checkbox disabled' : 'checkbox'}
+      type="checkbox"
+      disabled={disabled} />
   </div>
 )
 
