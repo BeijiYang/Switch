@@ -1,12 +1,22 @@
 # Switch
 
+support clicking or pressing the space bar.
+
+
+
 **available**
 
 
-![动图效果展示](./switch.gif)
+![switch](./switch.gif)
 
 
 **disabled**
 
 
-![动图效果展示](./switch-disabled.gif)
+![switch-disabled](./switch-disabled.gif)
+
+
+**show checkbox**
+
+
+![show-input](./show-input.gif)
