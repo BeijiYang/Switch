@@ -3,18 +3,15 @@ import PropTypes from 'prop-types'
 
 const Switch = React.forwardRef(
   ({ disabled,
-    handleClick,
-    handleKeyUp,
     checked,
-    handleFormChange },
-    ref) => (
+    handleFormChange }, ref) => (
       <div
         className='switch'
         ref={ref}
       >
         <input
-          className={disabled ? 'checkbox disabled' : 'checkbox'}
           type="checkbox"
+          className={disabled ? 'checkbox disabled' : 'checkbox'}
           onChange={handleFormChange}
           checked={checked}
           disabled={disabled}
@@ -23,9 +20,9 @@ const Switch = React.forwardRef(
     ))
 
 Switch.propTypes = {
-  onClick: PropTypes.func,
+  handleFormChange: PropTypes.func,
   disabled: PropTypes.bool,
-  status: PropTypes.bool,
+  checked: PropTypes.bool,
 }
 
 export default Switch
