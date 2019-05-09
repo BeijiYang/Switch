@@ -30,7 +30,7 @@ code {
 }
 
 .switch-wrap.disabled {
-   opacity: 0.6
+   opacity: 0.6;
 }
 .switch-wrap.disabled:hover {
   cursor: not-allowed;
@@ -40,13 +40,13 @@ code {
 }
 
 .switch {
-    position:absolute;
-    background-color:rgb(0, 166, 255);
-    width: 40%;
-    height: 100%;
-    transition:all 0.2s linear;
-    border-radius: 100px;
-    left: 0;
+  position:absolute;
+  background-color:rgb(0, 166, 255);
+  width: 40%;
+  height: 100%;
+  transition:all 0.2s linear;
+  border-radius: 100px;
+  left: 0;
 }
 
 .unchecked {
@@ -58,5 +58,5 @@ code {
   border-radius: 100px;
   width: 30px;
   background-color: yellow;
-  opacity: 0
+  opacity: 0;
 }
