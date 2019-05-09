@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Switch = ({ disabled }) => (
+const Switch = ({ disabled, handleClick, handleKeyUp, checked, handleFormChange }) => (
   <div className='switch'>
     <input
       className={disabled ? 'checkbox disabled' : 'checkbox'}
       type="checkbox"
+      onChange={handleFormChange}
+      checked={checked}
       disabled={disabled} />
   </div>
 )
@@ -13,6 +15,7 @@ const Switch = ({ disabled }) => (
 Switch.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  status: PropTypes.bool,
 }
 
 export default Switch
