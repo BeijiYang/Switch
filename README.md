@@ -2,7 +2,7 @@
 
 support clicking or pressing the space bar.
 
-
+focusing on the checkbox automatically using React.forwardRef.
 
 **available**
 

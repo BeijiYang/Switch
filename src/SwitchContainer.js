@@ -8,10 +8,11 @@ class SwitchContainer extends Component {
       status: true,
       disabled: false,
     }
+    this.checkBox = React.createRef()
   }
 
   componentDidMount() {
-    document.querySelector('input').focus()
+    this.checkBox.current.focus()
   }
 
   switch = (e) => {
@@ -33,7 +34,12 @@ class SwitchContainer extends Component {
         className={disabled ? 'switch-wrap disabled' : 'switch-wrap'}
         ref={(checkbox) => { this.checkbox = checkbox }}
       >
-        <Switch checked={status} disabled={disabled} handleFormChange={this.switch} />
+        <Switch
+          checked={status}
+          disabled={disabled}
+          handleFormChange={this.switch}
+          ref={this.checkBox}
+        />
       </ div>
     )
   }
